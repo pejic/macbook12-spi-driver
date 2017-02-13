@@ -1,4 +1,4 @@
-Very simple, work in progress input driver for the SPI keyboard / trackpad found on 12" MacBooks (2015 and later) and newer MacBook Pros (late 2016 and later).
+Very simple, work in progress input driver for the SPI keyboard / trackpad found on 12" MacBooks (2015 and later) and newer MacBook Pros (late 2016 and later), as well a simple touchbar driver for 2016 MacBook Pro's.
 
 Using it:
 ---------
@@ -55,6 +55,10 @@ Some useful values are (since the value is a bitmask, these can be combined):
 * 0x10000 - determine touchpad values range
 * 0x1     - turn on logging of touchpad initialization packets
 * 0x6     - turn on logging of backlight and caps-lock-led packets
+
+Touchbar:
+---------
+The touchbar driver is called `appletb`. It provides basic functionality, enabling the touchbar and switching between modes based on the FN key. Furthermore the touchbar is automatically switched off if no (internal) keyboard, touchpad, or touchbar input is received for 60 seconds; any (internal) keyboard or touchpad input switches it back on.
 
 Some useful threads:
 --------------------
