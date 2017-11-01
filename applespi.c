@@ -908,7 +908,7 @@ static int report_tp_state(struct applespi_data *applespi,
 {
 	static int min_x = 0, max_x = 0, min_y = 0, max_y = 0;
 	static bool dim_updated = false;
-	static ktime_t last_print = 0;
+	static ktime_t last_print = {0};
 
 	const struct tp_finger *f;
 	struct input_dev *input = applespi->touchpad_input_dev;
